@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Custom Order </title>
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="CSS_Files\base.css"> 
+    <link rel="stylesheet" href="CSS_Files\custom.css"> 
 </head>
 <body>
     <header>
@@ -21,31 +22,78 @@
             <h1> 🕮 Craft Your Own Tale 🕮 </h1>
             <h2>  Every artifact has a story. Tell us yours, and we will bring your 
             vision to life with a handcrafted creation made just for you. </h2>
-            <p>  ⚠  If you're unsure of what the colors look like, please include that in your notes
+            <p>  <strong>  If you're unsure of what the colors look like, please include that in your notes
                 so that we can send photos of the colors in sunlight. This helps ensure that you're getting as close to the actual 
-                as possible. ⚠
+                as possible. </p> </strong>
             </p>
         </div>
+
+
+
+
+<form class="custom-order-form" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" >
+
+<input
+    type="hidden"
+    name="access_key"
+    value="0f47b4be-b273-4430-89d0-233f3b864abe"
+>
+
+<input
+    type="hidden"
+    name="subject"
+    value="New Custom Creation Request"
+>
+
+<input
+    type="hidden"
+    name="redirect"
+    value="https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPOSITORY/thank-you.html"
+>
+
+<input
+    type="hidden"
+    name="from_name"
+    value="Red Fable Atelier Custom Order Form"
+>
+        
+
+
+
 
             <form class="custom-order-form">
                 <h2> Leave a Letter </h2>
             <div class="form-group">
                 <label for="name">Your Name</label>
                 <input 
-                    type="text"  id="name"  placeholder="Enter your name"  required>
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Enter your name" 
+                    autocomplete="name" 
+                    required >
             </div>
 
 
             <div class="form-group">
                 <label for="email"> Email Address </label>
                 <input 
-                    type="email" id="email"  placeholder="you@example.com"  required>
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="you@example.com" 
+                    autocomplete="email" 
+                    required >
             </div>
 
             <div class="form-group">
                 <label>What would you like crafted?</label>
 
-                <select>
+                <select
+                        id="item" 
+                        name="item" 
+                        required>
+
                     <option>Select an item</option>
                     <option>Custom Dice Set</option>
                     <option>Custom Dice Set w/ insert</option>
@@ -61,8 +109,10 @@
 
                 <textarea 
                     id="theme"
+                    name="theme"
                     rows="6"
-                    placeholder="Describe your colors, theme, character, and inspiration...">
+                    placeholder="Describe your colors, theme, character, and inspiration..."
+                    required >
                 </textarea>
             </div>
 
@@ -71,14 +121,22 @@
                     <label>Preferred Colors</label>
                     <input 
                     type="text"
-                    placeholder="Example: emerald green, gold, midnight blue, etc">
+                    id="colors"
+                    name="prefered_colors"
+                    placeholder="Example: emerald green, gold, midnight blue, etc"
+                    required >
                 </div>
 
 
                 <div class="form-group">
                     <label>Preferred Style</label>
+                
 
-                    <select>
+                    <select 
+                            id="style" 
+                            name="preferred_style" 
+                            required >
+
                         <option>Choose a color style</option>
                         <option>Transparent (see through)</option>
                         <option>Colorshift</option>
@@ -94,13 +152,7 @@
 
 
             <div class="form-group">
-                <label>  Inspiration Image or Reference  </label>
-                <input type="file">
-            </div>
-
-
-            <div class="form-group">
-                <label> Additional Notes </label>
+                <label>Additional Notes</label>
                 <textarea
                 rows="4"
                 placeholder="Anything else you'd like us to know?">
@@ -139,8 +191,8 @@
         <div class="footer-links">
             <h3>Explore</h3>
             <a href="index.html">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="about.html">About</a>
+            <a href="about.html">Shop</a>
+            <a href="shop.html">About</a>
             <a href="contact.html">Contact</a>
         </div>
 
@@ -148,9 +200,9 @@
         <div class="footer-links">
             <h3>Guild Hall</h3>
             <a href="custom.html">Custom Orders</a>
-            <a href="#">FAQ</a>
-            <a href="#">Shipping</a>
-            <a href="#">Policies</a>
+            <a href="faq.html">FAQ</a>
+            <a href="shipping.html">Shipping</a>
+            <a href="policies.html">Policies</a>
         </div>
 
 
