@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Frequently Asked Questions </title>
+    <link rel="stylesheet" href="CSS_Files\faq.css"> 
+    <link rel="stylesheet" href="CSS_Files\base.css"> 
+</head>
+<body>
+    <header>
+         <h1>Red Fable Atelier</h1>
+        <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <section class="faq-header">
+        <h1> Ask the Tomes of Wisdom</h1>
+    </section>
+
+    <section class="tomes">
+            <div class="library">
+                <div class="book-container">
+                    <h2 class="question">
+                        How long until my wares are ready?
+                    </h2>
+                    <div class="book">
+                        <div class="cover">
+                            <div class="gold-border"></div>
+                            <span class="title"> Shipping </span>
+                        </div>
+
+                            <div class="page page1"></div>
+                            <div class="page page2"></div>
+
+                        <div class="inside">
+                            All our wares are handmade by our in-house artisan. 
+                            Depending on the order quantity & item sizes, the artisan can take from 2-7 
+                            business days.
+                            Our owls deliver on a standard basis of 3-7 business days, 
+                            depending on your location. 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-container">
+                    <h2 class="question">
+                        Do you complete custom requests?
+                    </h2>
+                    <div class="book">
+                        <div class="cover">
+                            <div class="gold-border"></div>
+                            <span class="title"> Customs </span>
+                        </div>
+
+                            <div class="page page1"></div>
+                            <div class="page page2"></div>
+
+                        <div class="inside">
+                            We do indeed take custom requests!
+                            You can send us your idea through carrier owl on our Custom Order page,
+                            though we make no guarantee that the artisan will fulfill it.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-container">
+                    <h2 class="question">
+                        What about returning wares?
+                    </h2>
+                    <div class="book">
+                        <div class="cover">
+                            <div class="gold-border"></div>
+                            <span class="title"> Returns </span>
+                        </div>
+
+                            <div class="page page1"></div>
+                            <div class="page page2"></div>
+
+                        <div class="inside">
+                            Unfortunately, on custom requests we are unable to accept returns.
+                            However, on specific circumstances we are willing to do an 
+                            equivalent exchange if an item arrives severely damaged.
+                            If that is an issue, send us a letter through the Contact section and
+                            we will be happy to see what can be done.
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+
+
+<footer class="fairytale-footer">
+    <div class="footer-glow"></div>
+
+    <div class="footer-divider">
+        <img
+            src="images\footer-image.png" , alt="footer-image"
+            aria-hidden="true" >
+    </div>
+
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h2>Red Fable Atelier</h2>
+            <p> Handcrafted treasures woven from imagination, magic, and a little bit of wonder. </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Explore</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">Shop</a>
+            <a href="shop.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Guild Hall</h3>
+            <a href="custom.html">Custom Orders</a>
+            <a href="faq.html">FAQ</a>
+            <a href="shipping.html">Shipping</a>
+            <a href="policies.html">Policies</a>
+        </div>
+
+        <div class="footer-social">
+            <h3>Follow the Tale</h3>
+            <div class="social-icons">
+                <a href="#">✧</a>
+                <a href="#">☽</a>
+                <a href="#">❧</a>
+                <a href="#">✦</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            © 2026 Red Fable Atelier · Crafted beneath the moonlight
+        </p>
+    </div>
+
+</footer>
+
+<script>
+document.querySelectorAll(".book").forEach(book=>{
+    book.addEventListener("click",()=>{
+        book.classList.toggle("open");
+    });
+});
+</script>
+
+
+</body>
+</html>
