@@ -1,0 +1,48 @@
+:root{
+    --primary:#c81313;
+    --dark:#5b0000;
+    --light:#E9E4DE;
+    --black:#1A161B;
+    --accent:#a27c3f;
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+    --shadow-hover:0 15px 35px rgba(0,0,0,.15);
+}
+
+    h1, h2, h3, h4{
+    font-family: "Cormorant Garamond", serif;
+}
+
+   body{
+    font-family:"Marcellus", sans serif;
+    color:var(--black);
+    background:var(--light);
+}
+
+/*---------------------------------- NAV BAR ----------------------------------*/
+    
+    header {
+      background-color: var(--black);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-family: "Cormorant Upright Semi", serif;
+      color: var(--light);
+      font-size: 26px;
+      font-weight: normal;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: var(--light);
+      font-size: 20px;
+    }
+
+    nav a:hover {
+      text-decoration: underline, var(--dark);
+      color: var(--accent);
+    }

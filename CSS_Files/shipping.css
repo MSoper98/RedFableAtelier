@@ -1,0 +1,66 @@
+.shipping-header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      line-height: 1.0;
+}
+
+.shipping-header h1 {
+      font-family: "Marcellus", sans serif;
+      font-size: 42px;
+      color: var(--primary);
+      line-height: 1.0;
+}
+
+.ship-divider {
+  text-align: center;
+  padding: 0px 20px 40px 20px;
+}
+
+.ship-divider p {
+  font-family: "Cormorant Upright Semi", serif;
+  font-size: 42px;
+  color: var(--accent);
+}
+
+.ship-info {
+    text-align: center;
+    padding: 0px 0px 40px;
+}
+
+.ship-info p{
+  color: var(--black);
+  margin: 10px 20px 40px 20px;
+    font-family: "Marcellus", sans serif;
+    font-size: 24px;
+}
+
+.ship-intro {
+    padding: 20px;
+    color: var(--primary);
+    font-family: "Cormorant SC Semi", serif;
+    font-size: 34px;
+    line-height: 1.0;
+}
+
+.delays-info {
+    text-align: center;
+    font-family: "Cormorant Upright Bold", serif;
+    padding: 0px 0px 40px;
+}
+
+.lost-info {
+  padding: 20px;
+  font-family: "Cormorant SC Semi", serif;
+    color: var(--primary);
+    font-size: 34px;
+    line-height: 1.0;
+}
+
+
+.delays-info p{
+  color: var(--black);
+  margin: 10px 60px 40px 60px;
+      font-family: "Marcellus", sans serif;
+      font-size: 24px;
+      line-height: 1.0;
+}

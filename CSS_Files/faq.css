@@ -1,0 +1,252 @@
+  * {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background: var(--light);
+  font-family: "Marcellus", sans serif;
+  color: var(--black);
+}
+
+.faq-header {
+  width:min(95%,1700px);
+  margin:auto;
+  padding:40px 20px 30px 20px;
+}
+
+.faq-header h1{
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+.library {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: center;
+  gap: 60px;
+}
+
+.tomes{
+  margin-bottom: 80px;
+}
+
+.book-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  perspective: 1500px;
+  flex: 0 0 340px;
+}
+
+.question{
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--black);
+  font-weight: 400px;
+  margin-bottom: 4px;
+  min-height: 90px;
+  max-width: 340px;
+}
+
+.book{
+  position: relative;
+  width: 320px;
+  height: 420px;
+  transform-style: preserve-3d;
+  perspective: 2000px;
+}
+
+.cover{
+    position:absolute;
+    inset:0;
+    transform-origin:left;
+    transition:1s;
+    z-index:5;
+    border-radius:5px 12px 12px 5px;
+    overflow:hidden;
+    cursor:pointer;
+    background:
+    linear-gradient(
+        140deg,
+        #5b0000 0%,
+        #380000 40%,
+        #1a161b 100%
+    );
+    background-image:
+    repeating-radial-gradient(
+        circle at 25% 25%,
+        rgba(255,255,255,.03),
+        rgba(255,255,255,.03) 2px,
+        transparent 3px,
+        transparent 6px
+    ),
+    linear-gradient(
+        140deg,
+        #5b0000,
+        #1a161b
+    );
+    box-shadow:
+        0 20px 35px rgba(0,0,0,.35),
+        inset 0 2px 2px rgba(255,255,255,.12),
+        inset 0 -3px 8px rgba(0,0,0,.45);
+}
+
+.title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  color: var(--accent);
+  font-size: 3rem;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow:       0 0 1px #fff6cf,
+        0 0 6px rgba(255,215,0,.45),
+        1px 1px 0 #8b6b13,
+        -1px -1px 0 #fff5b0;
+}
+
+.cover::before{
+  content:"";
+  left: 14px;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background: var(--dark);
+}
+
+.cover span{
+  color: var(--black);
+  font-size: 3rem;
+  font-family: "Cormorant Upright Semi", serif;
+  writing-mode: vertical-lr;
+  letter-spacing: 2px;
+}
+
+.inside{
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(#f8f5d8, rgb(248, 230, 192));
+  padding: 45px;
+  border-radius:0px 5px 12px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1.15rem;
+  box-shadow: inset 20px 2.px 15px var(--black);
+}
+
+.book:hover .cover{
+  transform: rotateY(-160deg);
+}
+
+.book:hover {
+  transform: rotateY(-10deg);
+  transition: .8s;
+}
+
+.gold-border{
+    position:absolute;
+    inset:14px;
+    border:2px solid #c9a13c;
+    border-radius:8px;
+    box-shadow:
+        inset 0 0 3px rgba(255,255,255,.4),
+        0 0 10px rgba(255,215,0,.18);
+}
+
+.page{
+    position:absolute;
+    inset:0;
+    background:
+    repeating-linear-gradient(
+        #e8d2a0,
+        #e8d2a0 28px,
+        #fff5b0 29px
+    );
+    transform-origin:left;
+    transition:1s;
+    border-radius: 0px 5px 12px 5px;
+    box-shadow:
+    inset 0 0 10px rgba(0,0,0,.08);
+}
+
+.page1{
+    z-index:4;
+}
+
+.page2{
+    z-index:3;
+}
+
+.book.open .cover{
+    transform:rotateY(-165deg);
+}
+
+.book.open .page1{
+    transform:rotateY(-150deg);
+}
+
+.book.open .page2{
+    transform:rotateY(-158deg);
+}
+
+.cover::before{
+    content:"";
+    position:absolute;
+    left:10px;
+    top:0;
+    width:12px;
+    height:100%;
+    background:
+    linear-gradient(
+        to right,
+        #2b0707,
+        #000,
+        #5b0000
+    );
+    box-shadow:
+        inset -2px 0 rgba(255,255,255,.15);
+}
+
+.cover::after{
+    content:"";
+    position:absolute;
+    inset: 0;
+    background:
+    radial-gradient(circle at top left,
+    rgba(255,255,255,.15),
+    transparent 45%),
+    radial-gradient(circle at bottom right,
+    rgba(0,0,0,.25),
+    transparent 50%);
+    pointer-events:none;
+}
+
+
+
+
+/*---------------- RESPONSIVES -----------------*/
+@media (hover:hover){
+.book:hover .cover{
+    transform:rotateY(-165deg);
+}
+
+.book:hover .page1{
+    transform:rotateY(-150deg);
+    transition-delay:.05s;
+}
+
+.book:hover .page2{
+    transform:rotateY(-158deg);
+    transition-delay:.15s;
+}
+}

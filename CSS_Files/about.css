@@ -1,0 +1,126 @@
+:root{
+    --primary:#c81313;
+    --dark:#5b0000;
+    --light:#E9E4DE;
+    --black:#1A161B;
+    --accent:#a27c3f;
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+    --shadow-hover:0 15px 35px rgba(0,0,0,.15);
+}
+
+    h1, h2, h3, h4{
+    font-family: "Cormorant Garamond", serif;
+}
+
+   body{
+    font-family:"Marcellus", sans serif;
+    color:var(--black);
+    background:var(--light);
+}
+
+
+
+/*---------------------------------- NAV BAR ----------------------------------*/
+    
+    header {
+      background-color: var(--black);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-family: "Cormorant Upright Semi", serif;
+      color: var(--light);
+      font-size: 26px;
+      font-weight: normal;
+    }
+
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: var(--light);
+      font-size: 20px;
+    }
+
+    nav a:hover {
+      text-decoration: underline, var(--dark);
+      color: var(--accent);
+    }
+
+
+
+
+
+
+    .about-header {
+      text-align: center;
+      padding: 20px 20px 20px;
+      font-family: "Cormorant Upright Semi", serif;
+      font-size: 32px;
+      color: var(--black);
+      line-height: 1.0;
+    }
+
+    .about-bio h3 {
+      font-size: 48px;
+      margin-bottom: 0px;
+      color: var(--primary);
+    }
+
+    .logo {
+      width: 180px;
+      margin: 0 auto 0px;
+      display: block;
+    }
+
+    .intro {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+      .intro {
+      font-family: "Marcellus", sans serif;
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto 60px;
+      text-align: center;
+    }
+
+    .bios {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 0 80px 80px;
+    }
+
+    .bio {
+      text-align: center;
+    }
+
+    .bio h3 {
+      font-family: "Cormorant Upright Semi", serif;
+      font-size: 36px;
+      color: #780000;
+      line-height: 1.0;
+      margin-bottom: 10px;
+      text-align: left;
+      text-align: center;
+    }
+
+    .bio img {
+      width: 260px;
+      margin-bottom: 20px;
+    }
+
+    .bio p {
+      font-family: "Marcellus", sans serif;
+      font-size: 24px;
+      color: var(--black);
+      line-height: 1.4;
+      margin: 40px 160px 40px 160px;
+    }
+

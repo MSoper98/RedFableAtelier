@@ -1,0 +1,369 @@
+  .body-h2 {
+      font-family: "Marcellus", serif;
+      font-size: 140px;
+      background-color: var(--light);
+      color: var(--light);
+      line-height: 1.6;
+    }
+
+   .hero {
+        background-color: var(--black);
+        min-height: 180px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; 
+        position: relative;
+        color: var(--light);
+        text-align: center;
+    }
+
+    .hero p{
+        font-family: "Marcellus", serif;
+        font-size: 24px;
+        color: var(--accent);
+    }
+
+   .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .hero h2 {
+      font-family: "Cormorant Upright Semi", serif;
+      font-size: 48px;
+      color: var(--light);
+      line-height: 2.5;
+    }
+
+.content {
+    position: relative;
+}
+
+.content img {
+    border: 1px solid rgba(162,124,63,.5);
+    border-radius: 8px;
+    padding: 5px;
+    width: min(800px, 90%);
+    height: 600px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    transition: transform .4s ease, box-shadow .4s ease, filter .4s ease;
+}
+
+.content img:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 10px 25px var(--accent), 0 0 20px var(--accent);
+    filter: brightness(1.05);
+}
+
+@media (max-width: 700px) {
+    .hero h2 { font-size: 38px; }
+    .content img { height: 420px; }
+}
+
+
+
+
+
+
+/* ================= SECTION HEADING ================= */
+
+.section-heading {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.section-heading > span {
+    color: var(--accent);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    margin: 12px 0 15px;
+    color: var(--primary);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 52px;
+    font-weight: 600;
+}
+
+.section-heading p {
+    color: var(--black);
+    font-family: "Marcellus", serif;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+
+
+
+
+/* ================= FEATURED PRODUCTS ================= */
+
+.featured-products {
+    padding: 80px 7%;
+}
+
+.product-showcase {
+    display: grid;
+    grid-template-columns:
+        repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.featured-product {
+    text-decoration: none;
+    color: var(--black);
+    transition: .35s ease;
+}
+
+.product-image {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #ddd;
+    border: 1px solid rgba(162,124,63,.5);
+    padding: 6px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition:
+        transform .5s ease,
+        filter .5s ease;
+}
+
+.featured-product:hover .product-image img {
+    transform: scale(1);
+    filter: brightness(1);
+}
+
+.featured-product:hover .product-image {
+    box-shadow:
+        0 10px 20px var(--dark);
+}
+
+.product-info {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.product-collection {
+    display: block;
+    color: var(--accent);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.product-info h3 {
+    color: var(--black);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.product-info p {
+    color: var(--dark);
+    font-family: "Marcellus", serif;
+    font-size: 17px;
+}
+
+
+
+
+
+/* ================= COLLECTIONS ================= */
+
+.collections {
+    padding: 100px 7%;
+
+    background:
+        linear-gradient(
+            rgba(26,22,27,.95),
+            rgba(91,0,0,.92)
+        );
+    position: relative;
+}
+
+.collections .section-heading h2 {
+    color: var(--light);
+}
+
+.collections .section-heading p {
+    color: var(--light);
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.collection-card {
+    min-height: 380px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    background-size: cover;
+    background-position: center;
+    transition: .5s ease;
+}
+
+.collection-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            transparent 20%,
+            rgba(0,0,0,.9)
+        );
+    transition: .4s ease;
+}
+
+.collection-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.5);
+}
+
+.collection-card:hover::before {
+    background:
+        linear-gradient(
+            transparent 5%,
+            rgba(91,0,0,.9)
+        );
+}
+
+.collection-library {
+    background-image:
+        url("images/collections/library.jpg");
+}
+
+.collection-forest {
+    background-image:
+        url("images/collections/forest.jpg");
+}
+
+.collection-moon {
+    background-image:
+        url("images/collections/moon.jpg");
+}
+
+.collection-hearth {
+    background-image:
+        url("images/collections/hearth.jpg");
+}
+
+.collection-overlay {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 35px;
+}
+
+.collection-overlay span {
+    color: var(--accent);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.collection-overlay h3 {
+    color: var(--light);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 38px;
+    margin: 5px 0 10px;
+}
+
+.collection-overlay p {
+    color: var(--light);
+    font-family: "Marcellus", serif;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 550px;
+    margin-bottom: 18px;
+}
+
+.collection-overlay strong {
+    color: var(--accent);
+    font-family: "Marcellus", serif;
+    font-size: 15px;
+}
+
+
+
+
+
+
+/* ================= ATELIER INTRO ================= */
+
+.atelier-intro {
+    padding: 120px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.intro-decoration {
+    color: var(--accent);
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.atelier-intro > span {
+    color: var(--accent);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.atelier-intro h2 {
+    color: var(--primary);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 55px;
+    margin: 15px 0 25px;
+}
+
+.atelier-intro p {
+    color: var(--black);
+    font-family: "Marcellus", serif;
+    font-size: 19px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.text-link {
+    color: var(--dark);
+    font-family: "Marcellus", serif;
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 5px;
+    transition: .3s;
+}
+
+.text-link:hover {
+    color: var(--accent);
+}

@@ -1,0 +1,29 @@
+.policy-header {
+  text-align: center;
+  font-size: 32px;
+  color: var(--primary);
+  padding: 20px 40px 40px 40px;
+  line-height: 1.0;
+}
+
+.policy-brief {
+    padding: 20px;
+}
+
+.policy-intro {
+    text-align: center;
+    line-height: 1.0;
+    color: var(--primary);
+    font-family: "Cormorant SC Semi", serif;
+    font-size: 30px;
+    padding: 0px 0px 40px 0px;
+}
+
+.policy-brief p {
+  text-align: center;
+  color: var(--black);
+  margin: 10px 60px 40px 60px;
+  font-family: "Marcellus", sans serif;
+  font-size: 20px;;
+  line-height: 1.2;
+}

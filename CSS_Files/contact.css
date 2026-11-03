@@ -1,0 +1,128 @@
+.contact-page {
+    min-height:100vh;
+    padding:100px 8%;
+    position:relative;
+    background:linear-gradient(rgba(18,15,22,.88), rgba(18,15,22,.95));
+    color:var(--light);
+}
+
+.contact-wrapper { 
+    max-width:1200px; 
+    margin:auto; 
+    position:relative; 
+    z-index:2; }
+
+.contact-header { 
+    text-align:center; 
+    max-width:750px; 
+    margin:0 auto 70px; }
+
+.contact-header h1 { 
+    font-size:38px; 
+    color:var(--primary); 
+    margin:20px 0; }
+
+.contact-header p { 
+    color:var(--black); 
+    font-size:22px; 
+    line-height:1.6; }
+
+.contact-content { 
+    display:grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    align-items:center; 
+    gap:5px; 
+    max-width: 950px; 
+    margin: 0 auto;}
+
+.parchment-card {
+    background:linear-gradient(135deg,#f5e6c4,#e8d2a0);
+    color:var(--dark);
+    padding:45px;
+    border-radius:8px;
+    box-shadow:
+        0 0 10px rgba(91, 0, 0, 0.45),
+        0 0 25px rgba(91, 0, 0, 0.40),
+        0 0 45px rgba(91, 0, 0, 0.25),
+        0 12px 30px rgba(45, 0, 0, 0.30);
+    position: relative;
+
+    width: 98%;
+    margin: 20px auto 25px;
+}
+
+.parchment-card::before { 
+    content:""; 
+    position:absolute; 
+    inset:12px; 
+    border:1px solid var(--black); 
+    pointer-events:none; }
+
+.parchment-card h2 { 
+    color:var(--dark); 
+    font-size:35px; 
+    margin-bottom:25px; }
+
+.info-item { 
+    display:flex; 
+    align-items: flex-start; 
+    gap:10px; 
+    margin:30px auto 0; 
+    justify-content: center; 
+    width: max-content; 
+    max-width: 100%;}
+
+.info-item span { 
+    font-size:32px; 
+    color:var(--primary);}
+
+.info-item h3 { 
+    margin:0; 
+    font-size:24px;}
+
+.info-item p { 
+    font-size:18px; }
+
+.form-group { margin-bottom:25px; }
+    label { display:block; font-family:"Cormorant Garamond",serif; font-weight:600; font-size:20px; margin-bottom:8px; }
+    input, textarea, select { width:100%; padding:15px; border:none; background:var(--light); border-bottom:2px solid var(--accent); font-family:"Cormorant Garamond",serif; font-size:18px; }
+    textarea { resize:vertical; }
+    button { width:100%; padding:18px; border:none; background:var(--accent); color:var(--light); font-family:"Marcellus",sans-serif; font-size:22px; cursor:pointer; transition:.3s; }
+    button:hover { background:var(--dark); transform:translateY(-3px); }
+
+
+
+@media(max-width:900px){
+    .contact-content{grid-template-columns:1fr;}
+    .contact-header h1{font-size:45px;}
+    .parchment-card{padding:30px;}
+}
+
+@media (max-width: 700px) {
+
+    .contact-form {
+        width: calc(100% - 24px);
+        margin: 15px auto 20px;
+        padding: 18px;
+    }
+
+    .contact-form::before {
+        inset: 5px;
+    }
+
+    .contact-form > h2 {
+        font-size: 23px;
+    }
+
+    .contact-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+}

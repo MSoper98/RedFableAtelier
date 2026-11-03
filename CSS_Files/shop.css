@@ -1,0 +1,199 @@
+nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: var(--light);
+      font-size: 20px;
+}
+
+nav a:hover {
+      text-decoration: underline;
+}
+
+.shop-header {
+      text-align: center;
+      padding: 20px 20px 20px;
+}
+
+.shop-label h2 {
+      font-family: "Cormorant Upright Semi", serif;
+      color: var(--black);
+      line-height: 1.0;
+      font-size: 34px;
+      text-align: left;
+      text-align: center;
+}
+
+.shop-label p {
+    font-family: "Marcellus", sans serif;
+     font-size: 20px;
+      color: var(--accent);
+      line-height: 1.5;
+      text-align: left;
+      text-align: center;
+      margin-bottom: 20px;
+}
+
+.shop-hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    background:
+        linear-gradient(
+            rgba(26, 22, 27, .72),
+            rgba(91, 0, 0, .80)
+        ),
+        url("images/hero/atelier.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.shop-hero::before {
+    content: "";
+    position: absolute;
+    inset: 20px;
+    border: 1px solid var(--accent);
+    pointer-events: none;
+    opacity: .6;
+}
+
+.shop-hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-eyebrow {
+    display: block;
+    color: var(--primary);
+    font-family: "Cormorant Upright Semi", serif;
+    font-size: 28px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    margin: 40px 0px;
+}
+
+.shop-hero p {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    color: var(--light);
+    font-family: "Marcellus", serif;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+
+
+
+
+/* ================= COLLECTIONS ================= */
+
+.collections {
+    padding: 20px 0px 40px 0px;
+    position: relative;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns:
+        1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    max-width: 1800px;
+    margin: 40px 20px 20px 40px;
+}
+
+.collection-card {
+    min-height: 380px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    background-size: cover;
+    background-position: center;
+    transition: .5s ease;
+}
+
+.collection-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--black);
+    transition: .4s ease;
+}
+
+.collection-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 20px 45px var(--primary);
+}
+
+.collection-card:hover::before {
+    background:
+        linear-gradient(
+           var(--dark)
+        );
+}
+
+.collection-library {
+    background-image:
+        url("images/collections/library.jpg");
+}
+
+.collection-forest {
+    background-image:
+        url("images/collections/forest.jpg");
+}
+
+.collection-moon {
+    background-image:
+        url("images/collections/moon.jpg");
+}
+
+.collection-hearth {
+    background-image:
+        url("images/collections/hearth.jpg");
+}
+
+.collection-overlay {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 35px;
+}
+
+.collection-overlay span {
+    color: var(--accent);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.collection-overlay h3 {
+    color: var(--light);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 38px;
+    margin: 5px 0 10px;
+}
+
+.collection-overlay p {
+    color: var(--light);
+    font-family: "Marcellus", serif;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 550px;
+    margin-bottom: 18px;
+}
+
+.collection-overlay strong {
+    color: var(--accent);
+    font-family: "Marcellus", serif;
+    font-size: 15px;
+}

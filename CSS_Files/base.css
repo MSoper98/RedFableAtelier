@@ -1,0 +1,330 @@
+:root {
+    --primary: #c81313;
+    --dark: #5b0000;
+    --light: #E9E4DE;
+    --black: #1A161B;
+    --accent: #a27c3f;
+    --shadow: 0 10px 30px rgba(0,0,0,.08);
+    --shadow-hover: 0 15px 35px rgba(0,0,0,.15);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: "Marcellus", serif;
+    color: var(--black);
+    background: var(--light);
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Cormorant Upright Semi", serif;
+}
+
+p {
+    font-family: "Marcellus", serif;
+}
+
+a { color: inherit; }
+
+img {
+    max-width: 100%;
+}
+
+
+
+
+
+/*---------------------------------- NAV BAR ----------------------------------*/
+header {
+    background: var(--black);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+header h1 {
+    font-family: "Cormorant Upright Semi", serif;
+    color: var(--light);
+    font-size: 26px;
+    font-weight: normal;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 28px;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: var(--light);
+    font-size: 18px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width .3s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: var(--accent);
+}
+
+nav a:hover::after,
+nav a:focus-visible::after {
+    width: 100%;
+}
+
+
+
+
+
+/*------------------------ SHARED BUTTONS ----------------------*/
+.fantasy-button {
+    display: inline-block;
+    padding: 15px 35px;
+    border: 1px solid var(--accent);
+    color: var(--light);
+    background: rgba(26, 22, 27, .7);
+    text-decoration: none;
+    font-family: "Marcellus", serif;
+    letter-spacing: 1px;
+    transition: .35s ease;
+}
+
+
+.fantasy-button:hover,
+.fantasy-button:focus-visible {
+    background: var(--accent);
+    color: var(--black);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(162,124,63,.3);
+}
+
+
+
+
+
+
+/*------------------- FOOTER ------------------------*/
+.fairytale-footer {
+    position: relative;
+    background: linear-gradient(rgba(20,17,25,.92), rgba(10,8,15,.98));
+    color: var(--light);
+    padding: 50px 8% 25px;
+    overflow: hidden;
+}
+
+.footer-glow {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: var(--dark);
+    filter: blur(220px);
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer-divider {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: var(--accent);
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.footer-container {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-brand h2 {
+    font-size: 38px;
+    color: var(--light);
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    font-size: 17px;
+    color: var(--light);
+    line-height: 1.6;
+    max-width: 350px;
+}
+
+.footer-links h3,
+.footer-social h3 {
+    color: var(--light);
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    display: block;
+    color: var(--light);
+    text-decoration: none;
+    font-family: "Marcellus", serif;
+    font-size: 16px;
+    margin-bottom: 12px;
+    transition: .3s;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+    transform: translateX(8px);
+}
+
+.social-icons {
+    display: flex;
+    gap: 18px;
+}
+
+.social-icons a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 20px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.social-icons a:hover {
+    background: var(--accent);
+    color: var(--black);
+    transform: translateY(-5px) rotate(10deg);
+}
+
+.footer-bottom {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    border-top: 1px solid rgba(214,179,106,.3);
+    margin-top: 50px;
+    padding-top: 25px;
+}
+
+.footer-bottom p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
+    color: var(--accent);
+}
+
+
+
+
+
+
+
+/*------------- RESPONSIVES -------------*/
+
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    header { padding: 18px 20px; }
+    nav a { font-size: 16px; }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-brand p { margin: auto; }
+    .social-icons { justify-content: center; }
+}
+
+
+@media(max-width: 700px) {
+
+    .shop-hero {
+        min-height: 550px;
+
+        padding: 60px 25px;
+    }
+
+    .shop-hero h2 {
+        font-size: 58px;
+    }
+
+    .shop-hero p {
+        font-size: 17px;
+    }
+
+    .featured-products,
+    .collections {
+        padding: 70px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 42px;
+    }
+
+    .product-showcase {
+        grid-template-columns: 1fr;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .collection-card {
+        min-height: 350px;
+    }
+
+    .collection-overlay h3 {
+        font-size: 32px;
+    }
+
+    .atelier-intro {
+        padding: 80px 25px;
+    }
+
+    .atelier-intro h2,
+    .shop-cta h2 {
+        font-size: 42px;
+    }
+}
