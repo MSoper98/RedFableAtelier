@@ -1,0 +1,276 @@
+
+/* =========================
+   PRODUCT SECTION
+========================= */
+
+.door-shop {
+    width: 100%;
+    padding: 80px 5%;
+    background: #f5f2ed;
+    overflow: hidden;
+}
+
+.shop-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.shop-heading h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.shop-heading p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* =========================
+   PRODUCT GRID
+========================= */
+
+.door-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 40px 25px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* =========================
+   PRODUCT CONTAINER
+========================= */
+
+.door-product {
+    perspective: 1200px;
+    min-width: 0;
+}
+
+.product-reveal {
+    position: relative;
+    width: 100%;
+    min-height: 370px;
+    transform-style: preserve-3d;
+}
+
+/* =========================
+   PRODUCT CONTENT
+========================= */
+
+.product-content {
+    position: relative;
+    width: 100%;
+    min-height: 370px;
+    padding: 15px;
+    background: #fff;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.product-content img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.product-content h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-content p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.shop-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+.shop-button:hover {
+    background: #777;
+}
+
+/* =========================
+   DOORS
+========================= */
+
+.door {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    min-height: 370px;
+    z-index: 5;
+
+    background-color: #795b43;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.08),
+            transparent 30%,
+            rgba(0,0,0,0.12)
+        );
+
+    background-size: cover;
+    border: 2px solid #60452f;
+
+    transition:
+        transform 1.5s cubic-bezier(.68,-0.55,.27,1.55);
+
+    backface-visibility: hidden;
+}
+
+/* Left door */
+
+.left-door {
+    left: 0;
+    transform-origin: left center;
+    border-radius: 5px 0 0 5px;
+    border-right: 3px solid #4e3829;
+}
+
+/* Right door */
+
+.right-door {
+    right: 0;
+    transform-origin: right center;
+    border-radius: 0 5px 5px 0;
+    border-left: 3px solid #4e3829;
+}
+
+/* Door panel detailing */
+
+.door::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 2px solid rgba(255,255,255,0.25);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
+}
+
+.door::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    background: #d5b36b;
+    border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+.left-door::after {
+    right: 12px;
+}
+
+.right-door::after {
+    left: 12px;
+}
+
+/* =========================
+   OPENING ANIMATION
+========================= */
+
+.door-product.is-visible .left-door {
+    transform: rotateY(-110deg);
+}
+
+.door-product.is-visible .right-door {
+    transform: rotateY(110deg);
+}
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.door-product {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.door-product.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   TABLET RESPONSIVENESS
+========================= */
+
+@media (max-width: 1000px) {
+    .door-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 600px) {
+    .door-shop {
+        padding: 50px 5%;
+    }
+
+    .shop-heading h2 {
+        font-size: 27px;
+    }
+
+    .door-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px 12px;
+    }
+
+    .product-reveal,
+    .product-content,
+    .door {
+        min-height: 290px;
+    }
+
+    .product-content {
+        padding: 8px;
+    }
+
+    .product-content img {
+        height: 150px;
+    }
+
+    .product-content h3 {
+        font-size: 14px;
+    }
+
+    .product-content p {
+        font-size: 14px;
+    }
+
+    .shop-button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .door::before {
+        inset: 6px;
+    }
+}
+
+@media (max-width: 380px) {
+    .door-grid {
+        grid-template-columns: 1fr;
+    }
+}
